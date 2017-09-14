@@ -1,4 +1,6 @@
 src/client.min.js
+*.lock
+*.map
 .classpath
 .project
 .settings
