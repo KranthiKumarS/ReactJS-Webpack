@@ -20,7 +20,8 @@ export default class Nav extends React.Component {
         return brand;
     }
     render () {
-        const data = [{name:"link-1", id:1}, {name:"link-2", id:2}, {name:"link-3",id:3}, { name:"link-4", id:4}];
+        const data = [{name:"link-11", id:1}, {name:"link-21", id:2}, {name:"link-3",id:3}, { name:"link-4", id:4}];
+        const myStyle = "active";
         return (
             <nav className="navbar navbar-default">
             <div className="container-fluid">
@@ -43,7 +44,7 @@ export default class Nav extends React.Component {
                     <ul className="dropdown-menu" role="menu">
                         {
                             data.map(function(item, i){
-                                return <li key={i}><a href="#">{item.name}</a></li>
+                                return <li key={i}><a href="#" className={myStyle}>{item.name} {myStyle}</a></li>
                             })
                         }
                     </ul>
