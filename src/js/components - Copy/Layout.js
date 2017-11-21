@@ -7,6 +7,7 @@ import Header from "./Header";
 import Nav from "./Nav";
 import Row from "./Row";
 import Dropdown from "./Dropdown";
+import Header1 from "./Header.1";
 import NavBar from "./NavBar/NavBar";
 import TopHeader from "./TopHeader";
 import HeaderHotDeals from './HeaderHotDeals';
@@ -14,23 +15,21 @@ import Adds from "./Adds";
 import Services from "./Services";
 import HomeSlider from "./HomeSlider";
 import BestSellers from "./BestSellers";
-import AllCategoryNav from "./AllCategory/AllCategoryNav";
-import Tab from "./Tab"
+import ProductsItemData from "./data/ProductsItemData";
+import NavBrand from "./NavBar/NavBrand";
+import NavbarData from "./NavBar/navbarData";
+
+
 
 
 export default class Layout extends React.Component {
   
   render() { 
+    var navbar = NavbarData;
    return (
       <div>
         <div className="top-header">
-        <Container className="container">
-        <Row>
-        <Column className="col-sm-12">
-          <NavBar/>
-          </Column>
-          </Row>
-          </Container>
+        <NavBrand brandData={navbar.NavbarData.brandlogo}  /> 
         <Container className="container">
           <Row>
         <Column className="col-sm-12">
@@ -84,10 +83,7 @@ export default class Layout extends React.Component {
        </Container>
        </section>
 
-       <Container className="container">
-         {/* <AllCategoryNav/> */}
-         <Tab/>
-       </Container>
+
       
       
       </div>

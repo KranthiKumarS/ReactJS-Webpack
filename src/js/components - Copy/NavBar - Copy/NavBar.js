@@ -1,10 +1,12 @@
 import React from "react";
+
 import NavBrand from "./NavBrand";
 import NavMenu from "./NavMenu";
 import NavbarData from "./navbarData";
 
-export default class NavBar extends React.Component {
 
+export default class NavBar extends React.Component {
+  
   render() {
     var navbar = NavbarData;
     return (

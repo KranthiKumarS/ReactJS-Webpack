@@ -12,3 +12,4 @@ exports.NavbarData = {
     {linkTo: "#", text: "Link 3"}
     ]
 };
+    
