@@ -1,29 +1,37 @@
-import React from "react"
-
+import React from "react";
+import Ul from "./Ul";
+import TabInfo from "./TabInfo";
+import TabDescription from "./TabDescription";
+import TabData from "./data/TabData";
 export default class Tab extends React.Component {
     render(){
+        var procontenttab = TabData;
         return(
-            <div>
-
-
-
-
-
-  <ul class="nav nav-tabs">
-    <li role="presentation" class="active"><a href="#home" data-toggle="tab">Home</a></li>
-    <li role="presentation"><a href="#profile" data-toggle="tab">Profile</a></li>
-    <li role="presentation"><a href="#messages" data-toggle="tab">Messages</a></li>
-    <li role="presentation"><a href="#settings" data-toggle="tab">Settings</a></li>
-  </ul>
-
-
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home">content1</div>
-    <div role="tabpanel" class="tab-pane" id="profile">content2</div>
-    <div role="tabpanel" class="tab-pane" id="messages">content3</div>
-    <div role="tabpanel" class="tab-pane" id="settings">content4</div>
-  </div>
-
+            <div >
+                <Ul className="tabs">
+                <div className="tab-carousel">
+                    {
+                        procontenttab.contenttab.tabdatainfo.map(function(item, i){
+                            return  <div className="item" key={i} >
+                            <TabInfo 
+                            taburl={item.tabpath} 
+                            anchortitle={item.tablink}
+                            tabtoggle={item.tablink}
+                            className={item.className}/>
+                            </div>
+                        })
+                    }
+                    </div>
+                </Ul>
+                <div>
+                    {
+                        procontenttab.contenttab.tabdatainfo.map(function(item, i){
+                            return  <span key={i}>
+                            <TabDescription tabdec={item.tabinformation} tabinfoid={item.tablink} className={item.tabclass}/>
+                            </span>
+                        })
+                    }
+                </div>
 </div>
         );
     }

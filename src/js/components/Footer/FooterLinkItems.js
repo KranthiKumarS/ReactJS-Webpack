@@ -1,7 +1,7 @@
 import React from "react";
-import NavLink from "./NavLink";
+import FooterLinks from "./FooterLinks";
 import Title from "../Title";
-export default class NavLinkDropdown extends React.Component {
+export default class FooterLinkItems extends React.Component {
   render() { 
     const style = {
       width: '25%',
@@ -9,7 +9,7 @@ export default class NavLinkDropdown extends React.Component {
      };
     var links = this.props.links.map(function(link, i){
       return   <div key={i}>
-          <NavLink linkTo={link.linkTo} text={link.text} />
+          <FooterLinks linkTo={link.linkTo} text={link.text} />
        </div>
      
     });

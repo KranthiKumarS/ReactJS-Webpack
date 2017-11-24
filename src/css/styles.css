@@ -141,3 +141,46 @@ i {
     font-weight: bold;
     font-size: 20px;
 }
+
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border: solid 1px #ededed;
+}
+ul.tabs li{
+    background: none;
+    color: #222;
+    display: inline-block;
+    cursor: pointer;
+}
+ul.tabs li a{
+    padding: 15px 50px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+ul.tabs li .current{
+    background: #ededed;
+    color: #222;
+}
+
+.tab-content{
+    display: none;
+    background: #ededed;
+    padding: 15px;
+    float: left;
+    width: 100%;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+.tab-carousel{
+    overflow: hidden;
+    position: relative;
+}
+.tab-carousel .owl-item {
+    float: left;
+}

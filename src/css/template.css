@@ -7297,7 +7297,7 @@ body.ie .magemenu-menu.vertical-menu .explodedmenu li.show-cate,body.firefox .ma
   margin-top:-20px;
 }
 .owl-nav div{
-  position: relative; 
+  position: absolute; 
     width: 20px;
     height: 40px;
     float: left;
@@ -7334,8 +7334,8 @@ body.ie .wrap-service .service .block .info{
   color:#fff;
 }
 .owl-nav .owl-next{
-  float:right;
   cursor: pointer;
+  right: 0;
 }
 .owl-nav a i{
   line-height:40px;
@@ -8263,7 +8263,7 @@ body.account #maincontent{
   text-align: center;
   margin-bottom: 25px;
 }
-.page-footer .footer-middle > div strong {
+.page-footer .footer-middle div strong {
   display: block;
   font-size: 18px;
   text-transform: uppercase;
@@ -8273,7 +8273,10 @@ body.account #maincontent{
   height: auto;
   color: white;
 }
-.page-footer .footer-middle > div i {
+.follow-us a{
+  color: #fff;
+}
+.follow-us i {
   width: 40px;
   height: 40px;
   text-align: center;
@@ -8284,7 +8287,7 @@ body.account #maincontent{
   margin-right: 25px;
   display: inline-block;
 }
-.page-footer .footer-middle > div a {
+.page-footer .footer-middle div a {
   width: calc(100% - 65px);
   display: block;
   float: right;

@@ -5,7 +5,6 @@ import ProductsItemData from "./data/ProductsItemData";
 export default class BestSellers extends React.Component {
     render() {
         var productsitems = ProductsItemData;
-        console.log(productsitems)
         return (
             
             <div>
